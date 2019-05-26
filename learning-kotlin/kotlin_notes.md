@@ -74,3 +74,22 @@ print(str!!.length)
 
 ## Conditionals:
 When statements are essentially just switch statements
+
+Interesting aspect of *when statements*:
+```kotlin
+val result = when(mode) {
+    // this will have result -> "this is lazy work"
+    1 -> "this is lazy work"
+    
+    // this will have the result -> "the mode is still kind of lazy"
+    // as it will only return the final section
+    2 -> {
+        "the mode is 2"
+        "the mode is still kind of lazy"
+    }
+}
+```
+
+Cleaner version of Java's `if(val > 10 && val < 20)` is cleaner in Kotlin as `if(val in 10..20')`
+
+Another nice thing you can use is the keyword inversely. You can use `!in` instead.
