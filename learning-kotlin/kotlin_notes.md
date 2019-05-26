@@ -71,3 +71,6 @@ var str:String? = null //obviously a Nullable String
  // and we obviously didn't
 print(str!!.length)
 ```
+
+## Conditionals:
+When statements are essentially just switch statements
