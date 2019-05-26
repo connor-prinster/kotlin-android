@@ -93,3 +93,10 @@ val result = when(mode) {
 Cleaner version of Java's `if(val > 10 && val < 20)` is cleaner in Kotlin as `if(val in 10..20')`
 
 Another nice thing you can use is the keyword inversely. You can use `!in` instead.
+
+## Collections: Arrays and Lists
+
+* Arrays are if you know the exact amount of items in a collection
+    * `val array = arrayOf(<items>)`
+* Lists are if you do **NOT** know the number of items
+    * `val list = arrayOf(<items>)`
