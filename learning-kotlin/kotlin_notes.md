@@ -100,3 +100,7 @@ Another nice thing you can use is the keyword inversely. You can use `!in` inste
     * `val array = arrayOf(<items>)`
 * Lists are if you do **NOT** know the number of items
     * `val list = arrayOf(<items>)`
+* ArrayList:
+    * has a *.size
+    * has a *.contains(<query>)
+    * *.isEmpty()
