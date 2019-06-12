@@ -130,3 +130,40 @@ Another nice thing you can use is the keyword inversely. You can use `!in` inste
       x--
     }
     ```
+    
+## Break and Continue Operators
+* `break`:
+is used when we want to break out of a loop. Doesn't just skip a single iteration, kills whole loop
+```kotlin
+for(c in "Python") {
+    if(c == 'o') {
+        break
+    }
+    print(c)
+}
+```
+
+* continue:
+skips a single iteration
+```kotlin
+for(c in "Pythion") {
+    if(c == 'i') {
+        continue
+    }
+    print(c)
+}
+```
+
+* named loops:
+you can name loops for clarity!
+```kotlin
+outer@ for (i in 1..10) {
+    for (j in 1..10) {
+        if(i - j == 5) {
+            // can also use continue@outer
+            break@outer
+        }
+        println("$i - $j")
+    }
+}
+```
