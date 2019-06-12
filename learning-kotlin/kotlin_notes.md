@@ -99,8 +99,34 @@ Another nice thing you can use is the keyword inversely. You can use `!in` inste
 * Arrays are if you know the exact amount of items in a collection
     * `val array = arrayOf(<items>)`
 * Lists are if you do **NOT** know the number of items
-    * `val list = arrayOf(<items>)`
+    * `val list = listOf(<items>)`
 * ArrayList:
     * has a *.size
     * has a *.contains(<query>)
     * *.isEmpty()
+    using `*.remove(<element>)` will return a Boolean
+    
+## Loops:
+* for loops
+    * For a standard loop
+    ```kotlin
+    for(i in 1..10) {
+    // whatever else
+    }
+    ```
+    * to keep track of index and value at an index
+    ```kotlin
+    val list = listOf("Java", "Kotlin", "Python")
+    for((index, value) in list.withIndex()) {
+          println("Element at $index is $value")
+    }
+    ```
+
+* while loop
+    ```kotlin
+    val x = 9
+    while (x >= 0) {
+      println(x)
+      x--
+    }
+    ```

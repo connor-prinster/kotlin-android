@@ -6,6 +6,6 @@ fun main(args: Array<String>) {
     arrayList.remove("apple")
     println(arrayList)
     arrayList.add("lemon")
-    println(arrayList)
-
+    val subList = arrayList.subList(0, 2)
+    println("Sublist 0-2 is $subList")
 }
