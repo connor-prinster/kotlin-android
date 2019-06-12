@@ -155,7 +155,7 @@ for(c in "Pythion") {
 ```
 
 * named basics.loops:
-you can name basics.loops for clarity!
+you can name loops for clarity!
 ```kotlin
 outer@ for (i in 1..10) {
     for (j in 1..10) {

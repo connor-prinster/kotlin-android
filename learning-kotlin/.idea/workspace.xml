@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="81e850e9-032b-4dbe-b85d-e261502187eb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/basics/basicsChallenge/basicsChallenge.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kotlin_notes.md" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin_notes.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/breakContinue/breakContinue.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/basics/breakContinue/breakContinue.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/collections/ArraysLists.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/basics/collections/ArraysLists.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/conditionals/Conditionals.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/basics/conditionals/Conditionals.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helloWorld/HelloWorld.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/basics/helloWorld/HelloWorld.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/loops/Loops.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/basics/loops/Loops.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,32 +16,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/kotlin_notes.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="409">
-                <caret line="162" column="42" selection-start-line="162" selection-start-column="42" selection-end-line="162" selection-end-column="42" />
+              <first_editor relative-caret-position="310">
+                <caret line="160" column="22" lean-forward="true" selection-start-line="160" selection-start-column="22" selection-end-line="160" selection-end-column="22" />
               </first_editor>
               <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/basics/breakContinue/breakContinue.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="21" lean-forward="true" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/basics/basicsChallenge/basicsChallenge.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -74,10 +49,10 @@
         <option value="$PROJECT_DIR$/src/conditionals/Conditionals.kt" />
         <option value="$PROJECT_DIR$/src/collections/ArraysLists.kt" />
         <option value="$PROJECT_DIR$/src/loops/Loops.kt" />
-        <option value="$PROJECT_DIR$/kotlin_notes.md" />
         <option value="$PROJECT_DIR$/src/breakContinue/breakContinue.kt" />
         <option value="$PROJECT_DIR$/src/basics/breakContinue/breakContinue.kt" />
         <option value="$PROJECT_DIR$/src/basics/basicsChallenge/basicsChallenge.kt" />
+        <option value="$PROJECT_DIR$/kotlin_notes.md" />
       </list>
     </option>
   </component>
@@ -100,24 +75,6 @@
             <path>
               <item name="learning-kotlin" type="b2602c69:ProjectViewProjectNode" />
               <item name="learning-kotlin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="learning-kotlin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="learning-kotlin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="learning-kotlin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="learning-kotlin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="basics" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="learning-kotlin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="learning-kotlin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="basics" type="462c0819:PsiDirectoryNode" />
-              <item name="basicsChallenge" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -301,8 +258,8 @@
     <entry file="file://$PROJECT_DIR$/kotlin_notes.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="409">
-            <caret line="162" column="42" selection-start-line="162" selection-start-column="42" selection-end-line="162" selection-end-column="42" />
+          <first_editor relative-caret-position="310">
+            <caret line="160" column="22" lean-forward="true" selection-start-line="160" selection-start-column="22" selection-end-line="160" selection-end-column="22" />
           </first_editor>
           <second_editor />
         </state>
