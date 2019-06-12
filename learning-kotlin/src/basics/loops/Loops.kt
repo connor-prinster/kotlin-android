@@ -1,4 +1,4 @@
-package loops
+package basics.loops
 
 fun main(args : Array<String>) {
 //    forLoop()

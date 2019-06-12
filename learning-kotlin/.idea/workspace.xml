@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="81e850e9-032b-4dbe-b85d-e261502187eb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/breakContinue/breakContinue.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/basics/basicsChallenge/basicsChallenge.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kotlin_notes.md" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin_notes.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/breakContinue/breakContinue.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/basics/breakContinue/breakContinue.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/collections/ArraysLists.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/basics/collections/ArraysLists.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/conditionals/Conditionals.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/basics/conditionals/Conditionals.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helloWorld/HelloWorld.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/basics/helloWorld/HelloWorld.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/loops/Loops.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/basics/loops/Loops.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,11 +35,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/breakContinue/breakContinue.kt">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/basics/breakContinue/breakContinue.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
-              <caret line="41" column="26" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
+            <state relative-caret-position="102">
+              <caret line="6" column="21" lean-forward="true" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/basics/basicsChallenge/basicsChallenge.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -62,6 +76,8 @@
         <option value="$PROJECT_DIR$/src/loops/Loops.kt" />
         <option value="$PROJECT_DIR$/kotlin_notes.md" />
         <option value="$PROJECT_DIR$/src/breakContinue/breakContinue.kt" />
+        <option value="$PROJECT_DIR$/src/basics/breakContinue/breakContinue.kt" />
+        <option value="$PROJECT_DIR$/src/basics/basicsChallenge/basicsChallenge.kt" />
       </list>
     </option>
   </component>
@@ -89,6 +105,19 @@
               <item name="learning-kotlin" type="b2602c69:ProjectViewProjectNode" />
               <item name="learning-kotlin" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="learning-kotlin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="learning-kotlin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="basics" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="learning-kotlin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="learning-kotlin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="basics" type="462c0819:PsiDirectoryNode" />
+              <item name="basicsChallenge" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -118,67 +147,67 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Kotlin.breakContinue.BreakContinueKt">
-    <configuration name="breakContinue.BreakContinueKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Kotlin.basics.basicsChallenge.BasicsChallengeKt">
+    <configuration name="basics.basicsChallenge.BasicsChallengeKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <module name="learning-kotlin" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="breakContinue.BreakContinueKt" />
+      <option name="MAIN_CLASS_NAME" value="basics.basicsChallenge.BasicsChallengeKt" />
       <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="collections.ArraysListsKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+    <configuration name="basics.breakContinue.BreakContinueKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <module name="learning-kotlin" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="collections.ArraysListsKt" />
+      <option name="MAIN_CLASS_NAME" value="basics.breakContinue.BreakContinueKt" />
       <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="conditionals.ConditionalsKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+    <configuration name="basics.collections.ArraysListsKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <module name="learning-kotlin" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="conditionals.ConditionalsKt" />
+      <option name="MAIN_CLASS_NAME" value="basics.collections.ArraysListsKt" />
       <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="helloWorld.HelloWorldKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+    <configuration name="basics.conditionals.ConditionalsKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <module name="learning-kotlin" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="helloWorld.HelloWorldKt" />
+      <option name="MAIN_CLASS_NAME" value="basics.conditionals.ConditionalsKt" />
       <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="loops.LoopsKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+    <configuration name="basics.loops.LoopsKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <module name="learning-kotlin" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="loops.LoopsKt" />
+      <option name="MAIN_CLASS_NAME" value="basics.loops.LoopsKt" />
       <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -186,11 +215,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Kotlin.breakContinue.BreakContinueKt" />
-        <item itemvalue="Kotlin.loops.LoopsKt" />
-        <item itemvalue="Kotlin.collections.ArraysListsKt" />
-        <item itemvalue="Kotlin.conditionals.ConditionalsKt" />
-        <item itemvalue="Kotlin.helloWorld.HelloWorldKt" />
+        <item itemvalue="Kotlin.basics.basicsChallenge.BasicsChallengeKt" />
+        <item itemvalue="Kotlin.basics.breakContinue.BreakContinueKt" />
+        <item itemvalue="Kotlin.basics.loops.LoopsKt" />
+        <item itemvalue="Kotlin.basics.collections.ArraysListsKt" />
+        <item itemvalue="Kotlin.basics.conditionals.ConditionalsKt" />
       </list>
     </recent_temporary>
   </component>
@@ -219,13 +248,13 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32894737" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32894737" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.28588516" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.284689" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32977462" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32894737" />
@@ -240,14 +269,14 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/helloWorld/HelloWorld.kt">
+    <entry file="file://$PROJECT_DIR$/src/basics/helloWorld/HelloWorld.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/conditionals/Conditionals.kt">
+    <entry file="file://$PROJECT_DIR$/src/basics/conditionals/Conditionals.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="43" column="42" selection-start-line="43" selection-start-column="42" selection-end-line="43" selection-end-column="42" />
@@ -255,14 +284,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/collections/ArraysLists.java" />
-    <entry file="file://$PROJECT_DIR$/src/collections/ArraysLists.kt">
+    <entry file="file://$PROJECT_DIR$/src/basics/collections/ArraysLists.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/loops/Loops.kt">
+    <entry file="file://$PROJECT_DIR$/src/basics/loops/Loops.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
@@ -284,10 +313,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/breakContinue/breakContinue.kt">
+    <entry file="file://$PROJECT_DIR$/src/basics/breakContinue/breakContinue.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="41" column="26" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
+        <state relative-caret-position="102">
+          <caret line="6" column="21" lean-forward="true" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/basics/basicsChallenge/basicsChallenge.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
         </state>
       </provider>
     </entry>

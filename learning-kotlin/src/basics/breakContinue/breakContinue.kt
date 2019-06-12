@@ -1,4 +1,4 @@
-package breakContinue
+package basics.breakContinue
 
 fun main(args: Array<String>) {
 //    breakMethod()

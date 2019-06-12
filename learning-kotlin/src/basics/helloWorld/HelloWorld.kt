@@ -1,4 +1,4 @@
-package helloWorld
+package basics.helloWorld
 
 fun main(args: Array<String>) {
     val str:String = "Hello, World"

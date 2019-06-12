@@ -107,7 +107,7 @@ Another nice thing you can use is the keyword inversely. You can use `!in` inste
     using `*.remove(<element>)` will return a Boolean
     
 ## Loops:
-* for loops
+* for basics.loops
     * For a standard loop
     ```kotlin
     for(i in 1..10) {
@@ -154,8 +154,8 @@ for(c in "Pythion") {
 }
 ```
 
-* named loops:
-you can name loops for clarity!
+* named basics.loops:
+you can name basics.loops for clarity!
 ```kotlin
 outer@ for (i in 1..10) {
     for (j in 1..10) {

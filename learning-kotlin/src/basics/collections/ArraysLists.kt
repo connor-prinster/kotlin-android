@@ -1,4 +1,4 @@
-package collections
+package basics.collections
 
 fun main(args: Array<String>) {
     val arrayList = arrayListOf("apple", "orange", "banana")
