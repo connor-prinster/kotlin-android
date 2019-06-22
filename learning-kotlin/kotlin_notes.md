@@ -167,3 +167,23 @@ outer@ for (i in 1..10) {
     }
 }
 ```
+
+## Object
+
+Below is an example of a class declaration
+```kotlin
+class Person {
+    private val age: Int = 42
+    private val name: String = "Bob"
+    private val randomFact: Int = Random.nextInt(0, 100)
+    fun whoAmI() {
+        println("$name is $age with $randomFact things.")
+    }
+    fun getYearBorn() = 2019 - age
+}
+
+fun main() {
+    val person = Person()
+    println(person.getYearBorn())
+}
+```

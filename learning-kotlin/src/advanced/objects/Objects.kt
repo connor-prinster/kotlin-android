@@ -2,17 +2,28 @@ package advanced.objects
 
 import kotlin.random.Random
 
-class Person {
-    private val age: Int = 42
-    private val name: String = "Bob"
-    private val randomFact: Int = Random.nextInt(0, 100)
+class Person(name: String, pronoun: String, age: Int) {
+    private val age: Int
+    private val name: String
+    private val randomInt: Int
+    private val pronoun: String
+
+    init {
+        this.age = age
+        this.name = name
+        this.randomInt = Random.nextInt(0, 100)
+        this.pronoun = pronoun
+    }
 
     fun whoAmI() {
-        println("$name is $age with $randomFact things.")
+        println("$name is $age with $randomInt things.")
     }
+    fun getYearBorn() = 2019 - age
+    fun getProunoun() = this.pronoun
 }
 
 fun main() {
-    val person = Person()
+    val person = Person("Galabrial Johnlohnson", "He", 42);
     person.whoAmI()
+    println("${person.getProunoun()} was born in ${person.getYearBorn()}")
 }
