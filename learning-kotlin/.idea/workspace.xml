@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="81e850e9-032b-4dbe-b85d-e261502187eb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/basics/loops/ReverseList.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/advanced/objects/Objects.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/basics/loops/ReverseList.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/basics/loops/ReverseList.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,11 +30,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/basics/loops/ReverseList.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+            <state relative-caret-position="187">
+              <caret line="11" column="17" lean-forward="true" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/advanced/objects/Objects.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
             </state>
           </provider>
         </entry>
@@ -64,12 +74,13 @@
         <option value="$PROJECT_DIR$/src/basics/basicsChallenge/basicsChallenge.kt" />
         <option value="$PROJECT_DIR$/kotlin_notes.md" />
         <option value="$PROJECT_DIR$/src/basics/loops/ReverseList.kt" />
+        <option value="$PROJECT_DIR$/src/advanced/objects/Objects.kt" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1578" />
-    <option name="width" value="1434" />
+    <option name="x" value="1490" />
+    <option name="width" value="1522" />
     <option name="height" value="1932" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -90,6 +101,12 @@
               <item name="learning-kotlin" type="b2602c69:ProjectViewProjectNode" />
               <item name="learning-kotlin" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="learning-kotlin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="learning-kotlin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="objects" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="learning-kotlin" type="b2602c69:ProjectViewProjectNode" />
@@ -133,7 +150,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Kotlin.basics.loops.ReverseListKt">
+  <component name="RunManager" selected="Kotlin.advanced.objects.ObjectsKt">
+    <configuration name="advanced.objects.ObjectsKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+      <module name="learning-kotlin" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="advanced.objects.ObjectsKt" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="basics.basicsChallenge.BasicsChallengeKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <module name="learning-kotlin" />
       <option name="VM_PARAMETERS" />
@@ -155,19 +185,6 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="MAIN_CLASS_NAME" value="basics.breakContinue.BreakContinueKt" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="basics.collections.ArraysListsKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
-      <module name="learning-kotlin" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="basics.collections.ArraysListsKt" />
       <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -201,11 +218,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.advanced.objects.ObjectsKt" />
         <item itemvalue="Kotlin.basics.loops.ReverseListKt" />
         <item itemvalue="Kotlin.basics.basicsChallenge.BasicsChallengeKt" />
         <item itemvalue="Kotlin.basics.breakContinue.BreakContinueKt" />
         <item itemvalue="Kotlin.basics.loops.LoopsKt" />
-        <item itemvalue="Kotlin.basics.collections.ArraysListsKt" />
       </list>
     </recent_temporary>
   </component>
@@ -223,10 +240,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="789" y="0" width="717" height="966" extended-state="0" />
+    <frame x="745" y="0" width="761" height="966" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29135054" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27311522" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -315,8 +332,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/basics/loops/ReverseList.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+        <state relative-caret-position="187">
+          <caret line="11" column="17" lean-forward="true" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/advanced/objects/Objects.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
     </entry>

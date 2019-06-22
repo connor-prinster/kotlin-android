@@ -17,7 +17,7 @@ fun fillArr(): ArrayList<Int> {
     return arr
 }
 
-fun revArr(arr: ArrayList<Int>): ArrayList<Int> {
+fun revArr(arr: List<Int>): List<Int> {
     var rev = arrayListOf<Int>()
     for(i in arr.size - 1 downTo 0) {
         rev.add(arr.get(i))
