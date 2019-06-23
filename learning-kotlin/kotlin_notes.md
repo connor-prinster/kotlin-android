@@ -187,3 +187,30 @@ fun main() {
     println(person.getYearBorn())
 }
 ```
+
+You can also add a bit of sugary syntax by assigning a variable outside of the `init` block
+```kotlin
+class Book(private val title: String, private val author: String, private val pubDate: String) { 
+    fun printInfo() {
+        println("$title, written by $author, was written in $pubDate.")
+        }
+}
+```
+
+You can also mix up the order of parameters if you name them. Like so
+```kotlin
+class House(val height: Double, val color: String, val price: Int, val width: Double = 5.0) {
+    fun printInfo() {
+        println("House [height: $height, width: $width color: $color, price: $price")
+    }
+}
+
+fun main() {
+    val house = House(5.0, "blue", 500000)
+    val redHouse = House(color = "red", height = 6.0, price = 250000)
+    val yellowHouse = House(color = "yellow", height = 6.0, width = 6.0, price = 300000)
+    house.printInfo()
+    redHouse.printInfo()
+    yellowHouse.printInfo()
+}
+```

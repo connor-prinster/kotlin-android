@@ -25,7 +25,22 @@ class Book(private val title: String,
     }
 }
 
+class House(val height: Double, val color: String, val price: Int, val width: Double = 5.0) {
+    fun printInfo() {
+        println("House [height: $height, width: $width color: $color, price: $price")
+    }
+}
+
 fun main() {
+    val house = House(5.0, "blue", 500000)
+    val redHouse = House(color = "red", height = 6.0, price = 250000)
+    val yellowHouse = House(color = "yellow", height = 6.0, width = 6.0, price = 300000)
+    house.printInfo()
+    redHouse.printInfo()
+    yellowHouse.printInfo()
+}
+
+fun bookStuff() {
     val book = Book("Eragon", "Christopher Paolini", "2002")
     book.getInfo()
     book.switchStatus()
