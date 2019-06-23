@@ -2,17 +2,14 @@ package advanced.objects
 
 import kotlin.random.Random
 
-class Person(name: String, pronoun: String, age: Int) {
-    private val age: Int
-    private val name: String
+class Person(private val name: String,
+             private val pronoun: String,
+             private val age: Int) {
+
     private val randomInt: Int
-    private val pronoun: String
 
     init {
-        this.age = age
-        this.name = name
         this.randomInt = Random.nextInt(0, 100)
-        this.pronoun = pronoun
     }
 
     fun whoAmI() {
