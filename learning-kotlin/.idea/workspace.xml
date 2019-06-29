@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="81e850e9-032b-4dbe-b85d-e261502187eb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/advanced/inheritance/Inheritance.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kotlin_notes.md" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin_notes.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/advanced/challenges/Challenge.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/advanced/challenges/Challenge.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,14 +17,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kotlin_notes.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="483">
-                <caret line="204" column="5" lean-forward="true" selection-start-line="204" selection-start-column="5" selection-end-line="204" selection-end-column="5" />
+              <first_editor relative-caret-position="3213">
+                <caret line="189" selection-start-line="189" selection-end-line="189" />
               </first_editor>
               <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/advanced/inheritance/Inheritance.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="19" lean-forward="true" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -33,7 +41,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/advanced/challenges/Challenge.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
+            <state relative-caret-position="459">
               <caret line="27" selection-start-line="27" selection-end-line="40" selection-end-column="1" />
             </state>
           </provider>
@@ -67,6 +75,7 @@
         <option value="$PROJECT_DIR$/src/advanced/objects/Objects.kt" />
         <option value="$PROJECT_DIR$/src/advanced/challenges/Challenge.kt" />
         <option value="$PROJECT_DIR$/kotlin_notes.md" />
+        <option value="$PROJECT_DIR$/src/advanced/inheritance/Inheritance.kt" />
       </list>
     </option>
   </component>
@@ -81,6 +90,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -103,6 +113,13 @@
               <item name="learning-kotlin" type="b2602c69:ProjectViewProjectNode" />
               <item name="learning-kotlin" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="advanced" type="462c0819:PsiDirectoryNode" />
+              <item name="inheritance" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="learning-kotlin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="learning-kotlin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="basics" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -116,12 +133,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../java-programs/java-badge-training/project/pom.xml" />
     <property name="settings.editor.selected.configurable" value="Settings.Markdown" />
   </component>
   <component name="RecentsManager">
@@ -142,7 +159,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Kotlin.advanced.challenges.ChallengeKt">
+  <component name="RunManager" selected="Kotlin.advanced.inheritance.InheritanceKt">
     <configuration name="advanced.challenges.ChallengeKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <module name="learning-kotlin" />
       <option name="VM_PARAMETERS" />
@@ -151,6 +168,19 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="MAIN_CLASS_NAME" value="advanced.challenges.ChallengeKt" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="advanced.inheritance.InheritanceKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+      <module name="learning-kotlin" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="advanced.inheritance.InheritanceKt" />
       <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -182,19 +212,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="basics.breakContinue.BreakContinueKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
-      <module name="learning-kotlin" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="basics.breakContinue.BreakContinueKt" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="basics.loops.ReverseListKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <module name="learning-kotlin" />
       <option name="VM_PARAMETERS" />
@@ -210,11 +227,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.advanced.inheritance.InheritanceKt" />
         <item itemvalue="Kotlin.advanced.challenges.ChallengeKt" />
         <item itemvalue="Kotlin.advanced.objects.ObjectsKt" />
         <item itemvalue="Kotlin.basics.loops.ReverseListKt" />
         <item itemvalue="Kotlin.basics.basicsChallenge.BasicsChallengeKt" />
-        <item itemvalue="Kotlin.basics.breakContinue.BreakContinueKt" />
       </list>
     </recent_temporary>
   </component>
@@ -233,8 +250,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="745" y="0" width="761" height="966" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28165007" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.29018492" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -243,7 +261,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32894737" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32894737" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32894737" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39952153" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -320,18 +338,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/advanced/challenges/Challenge.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="27" selection-start-line="27" selection-end-line="40" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/kotlin_notes.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="483">
-            <caret line="204" column="5" lean-forward="true" selection-start-line="204" selection-start-column="5" selection-end-line="204" selection-end-column="5" />
+          <first_editor relative-caret-position="3213">
+            <caret line="189" selection-start-line="189" selection-end-line="189" />
           </first_editor>
           <second_editor />
         </state>
@@ -339,6 +350,20 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="50" column="58" lean-forward="true" selection-start-line="50" selection-start-column="58" selection-end-line="50" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/advanced/challenges/Challenge.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" selection-start-line="27" selection-end-line="40" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/advanced/inheritance/Inheritance.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="19" lean-forward="true" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
         </state>
       </provider>
     </entry>
