@@ -244,3 +244,19 @@ class Student(override val name: String, override val age: Int): Person(name, ag
     }
 }
 ```
+
+## Interfaces
+
+You can have values as well as methods inside of interfaces. You cannot, however,
+assign a value to it. For example:
+```kotlin
+interface Buildable {
+    val timeToBuild: Int // do not instantiate in Interface
+}
+
+class Car(val color: String): Buildable {
+
+    override val timeToBuild: Int = 10
+    
+}
+```
