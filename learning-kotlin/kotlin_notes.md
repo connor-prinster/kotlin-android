@@ -214,3 +214,33 @@ fun main() {
     yellowHouse.printInfo()
 }
 ```
+
+## Open/Abstract class
+
+Open and Abstract classes are very similar. Open classes **CAN** be overriden, abstract **MUST**.
+An example of the abstract and open values are below.
+
+```kotlin
+abstract class Person(open val name: String, open val age: Int) {
+
+    fun greet() {
+        println("Hello, my name is $name and I am $age")
+    }
+
+    abstract fun speak()
+
+    fun getYearOfBirth() = 2019 - age
+}
+
+class Employee(override val name: String, override val age: Int): Person(name, age) {
+    override fun speak() {
+        println("I am an employee")
+    }
+}
+
+class Student(override val name: String, override val age: Int): Person(name, age) {
+    override fun speak() {
+        println("I am a student")
+    }
+}
+```
