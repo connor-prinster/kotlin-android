@@ -260,3 +260,30 @@ class Car(val color: String): Buildable {
     
 }
 ```
+
+## Multiple Inheritance
+
+It is possible to inherit from multiple places with the same named function. For example,
+the `learn()` class is shown below found in both the `interface Learnable` and the 
+`abstract class Course`:
+```kotlin
+abstract class Course(val topic: String, val price: Double) {
+    open fun learn() {
+        println("hello")
+    }
+}
+
+interface Learnable {
+    fun learn() {
+        println("Learning")
+    }
+}
+
+open class KotlinCourse() : Course("Kotlin", 999.99), Learnable {
+    final override fun learn() {
+        super<Course>.learn()
+        super<Learnable>.learn()
+        println("I'm one of the first people to learn Kotlin!")
+    }
+}
+```
