@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="81e850e9-032b-4dbe-b85d-e261502187eb" name="Default Changelist" comment="" />
+    <list default="true" id="81e850e9-032b-4dbe-b85d-e261502187eb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/advanced/enums/Enums.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kotlin_notes.md" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin_notes.md" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,8 +22,8 @@
         <entry file="file://$PROJECT_DIR$/kotlin_notes.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="381">
-                <caret line="368" column="8" lean-forward="true" selection-start-line="368" selection-start-column="8" selection-end-line="368" selection-end-column="8" />
+              <first_editor relative-caret-position="171">
+                <caret line="367" lean-forward="true" selection-start-line="367" selection-end-line="367" />
               </first_editor>
               <second_editor />
             </state>
@@ -29,8 +33,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/advanced/singletons/Singletons.kt">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/advanced/enums/Enums.kt">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
-              <caret line="2" selection-start-line="2" selection-end-line="8" selection-end-column="1" />
+              <caret line="2" selection-start-line="2" selection-end-line="16" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -70,6 +83,7 @@
         <option value="$PROJECT_DIR$/src/advanced/challenges/BookChallenge.kt" />
         <option value="$PROJECT_DIR$/src/advanced/challenges/InheritanceChallenge.kt" />
         <option value="$PROJECT_DIR$/src/advanced/singletons/Singletons.kt" />
+        <option value="$PROJECT_DIR$/src/advanced/enums/Enums.kt" />
         <option value="$PROJECT_DIR$/kotlin_notes.md" />
       </list>
     </option>
@@ -85,8 +99,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -104,6 +118,12 @@
               <item name="learning-kotlin" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="advanced" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="learning-kotlin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="learning-kotlin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="basics" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -134,20 +154,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Kotlin.advanced.challenges.InheritanceChallengeKt">
-    <configuration name="advanced.abstractClasses.AbstractClassesKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
-      <module name="learning-kotlin" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="advanced.abstractClasses.AbstractClassesKt" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Kotlin.advanced.enums.EnumsKt">
     <configuration name="advanced.challenges.InheritanceChallengeKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <module name="learning-kotlin" />
       <option name="VM_PARAMETERS" />
@@ -174,14 +181,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="advanced.inheritance.InheritanceKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+    <configuration name="advanced.enums.EnumsKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <module name="learning-kotlin" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="advanced.inheritance.InheritanceKt" />
+      <option name="MAIN_CLASS_NAME" value="advanced.enums.EnumsKt" />
       <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -200,13 +207,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="advanced.singletons.SingletonsKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+      <module name="learning-kotlin" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="advanced.singletons.SingletonsKt" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.advanced.enums.EnumsKt" />
+        <item itemvalue="Kotlin.advanced.singletons.SingletonsKt" />
         <item itemvalue="Kotlin.advanced.challenges.InheritanceChallengeKt" />
         <item itemvalue="Kotlin.advanced.dataClasses.DataClassesKt" />
         <item itemvalue="Kotlin.advanced.interfaces.InterfacesKt" />
-        <item itemvalue="Kotlin.advanced.abstractClasses.AbstractClassesKt" />
-        <item itemvalue="Kotlin.advanced.inheritance.InheritanceKt" />
       </list>
     </recent_temporary>
   </component>
@@ -227,7 +247,7 @@
     <frame x="745" y="0" width="761" height="966" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31863442" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.32859176" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -236,7 +256,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32894737" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32894737" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32894737" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39952153" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -376,16 +396,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/advanced/singletons/Singletons.kt">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/advanced/enums/Enums.kt">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="8" selection-end-column="1" />
+          <caret line="2" selection-start-line="2" selection-end-line="16" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/kotlin_notes.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="381">
-            <caret line="368" column="8" lean-forward="true" selection-start-line="368" selection-start-column="8" selection-end-line="368" selection-end-column="8" />
+          <first_editor relative-caret-position="171">
+            <caret line="367" lean-forward="true" selection-start-line="367" selection-end-line="367" />
           </first_editor>
           <second_editor />
         </state>

@@ -369,13 +369,25 @@ object Cache {
 ## Enums
 This is a very basic version of an enum. This is just a very good reference
 ```kotlin
-fun main(args: String<Array>) {
-    val red = Color.RED
-    val green = Color.GREEN
-    val blue = Color.BLUE
-}
-enum class Color {
-    RED, GREEN, BLUE
+enum class Color(val rgb: Int) {
+    RED(0xFF0000),
+    GREEN(0x00FF00),
+    YELLOW(0xFFFF00);
 }
 
+fun main(args: Array<String>) {
+    // "RED" (name of enum)
+    val redName = Color.RED
+    // 16711680 (binary version of hex)
+    val redHex = Color.RED.rgb
+
+    // prints a string of values relating to the enum
+    println("Name of enum object: $redName\nBinary value of enum object: $redHex")
+}
 ```
+
+## Hex and Binary
+Hex values are represented by something similar to `0b11111111`
+Binary values are represented by something similar to `0xFF`
+
+From this, `println(0b11111111 == 0xFF)` will result in `true`
