@@ -365,3 +365,17 @@ object Cache {
     }
 }
 ```
+
+## Enums
+This is a very basic version of an enum. This is just a very good reference
+```kotlin
+fun main(args: String<Array>) {
+    val red = Color.RED
+    val green = Color.GREEN
+    val blue = Color.BLUE
+}
+enum class Color {
+    RED, GREEN, BLUE
+}
+
+```

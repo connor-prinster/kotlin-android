@@ -18,8 +18,8 @@
         <entry file="file://$PROJECT_DIR$/kotlin_notes.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="375">
-                <caret line="359" column="14" lean-forward="true" selection-start-line="359" selection-start-column="14" selection-end-line="359" selection-end-column="14" />
+              <first_editor relative-caret-position="381">
+                <caret line="368" column="8" lean-forward="true" selection-start-line="368" selection-start-column="8" selection-end-line="368" selection-end-column="8" />
               </first_editor>
               <second_editor />
             </state>
@@ -104,26 +104,6 @@
               <item name="learning-kotlin" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="advanced" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="learning-kotlin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="learning-kotlin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="advanced" type="462c0819:PsiDirectoryNode" />
-              <item name="challenges" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="learning-kotlin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="learning-kotlin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="basics" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="learning-kotlin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="learning-kotlin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="basics" type="462c0819:PsiDirectoryNode" />
-              <item name="loops" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -404,8 +384,8 @@
     <entry file="file://$PROJECT_DIR$/kotlin_notes.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="375">
-            <caret line="359" column="14" lean-forward="true" selection-start-line="359" selection-start-column="14" selection-end-line="359" selection-end-column="14" />
+          <first_editor relative-caret-position="381">
+            <caret line="368" column="8" lean-forward="true" selection-start-line="368" selection-start-column="8" selection-end-line="368" selection-end-column="8" />
           </first_editor>
           <second_editor />
         </state>
