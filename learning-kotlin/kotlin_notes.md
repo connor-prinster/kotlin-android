@@ -352,3 +352,16 @@ Also, `data class` can function similarly to grabbing objects from React `props`
 val (title, author, year, price) = dataBook1
 ```
 
+## Object
+
+The keyword `object` allows you to create an object that can only be instantiated one. This
+particular example below is about having an application-wide cache. 
+```kotlin
+object Cache {
+    val name = "Cache"
+
+    fun retrieveData(): Int {
+        return 0
+    }
+}
+```
