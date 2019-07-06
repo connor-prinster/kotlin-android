@@ -391,3 +391,6 @@ Hex values are represented by something similar to `0b11111111`
 Binary values are represented by something similar to `0xFF`
 
 From this, `println(0b11111111 == 0xFF)` will result in `true`
+
+## Getters and Setters
+Good examples of a getter and setter for classes
