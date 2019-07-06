@@ -287,3 +287,68 @@ open class KotlinCourse() : Course("Kotlin", 999.99), Learnable {
     }
 }
 ```
+
+## Data Class
+A `data class` is very useful if the class will do nothing other than hold data. One thing is that it
+ makes the `print()` method look nicer as it makes its own `*.toString()` method. For example: 
+
+```kotlin
+class Book(val title: String, val author: String, val publicationYear: Int, var price: Double) {}
+
+data class DataBook(val title: String, val author: String, val publicationYear: Int, var price: Double) {}
+
+fun main(args: Array<String>) {
+    val book = Book("Super Book", "John Doe", 2017, 99.99)
+    val dataBook = DataBook("Super Book", "John Doe", 2017, 99.99)
+
+    println(book)
+    // will print the class name and their parent classes
+    println(dataBook)
+    // will print "DataBook(title=Super Book,...,price=99.99(
+}
+```
+in order for the `Book` class to print the same way as `DataBook`, it will require this method
+```kotlin
+override fun toString(): String {
+    return "Book(title=$title, author=$author, publicationYear=$publicationYear, price=$price)"
+}
+```
+
+another great thing a `data class` can do is have two objects with identical attributes satisfy
+a `.equals()` method. The attributes are compared to one another as opposed to
+checking if the object is actually the same object.
+For example:
+
+```kotlin
+val book1 = Book("Super Book", "John Doe", 2017, 99.99)
+val book2 = Book("Super Book", "John Doe", 2017, 99.99)
+val dataBook1 = DataBook("Super Book", "John Doe", 2017, 99.99)
+val dataBook2 = DataBook("Super Book", "John Doe", 2017, 99.99)
+    
+// prints "false"
+println(book1.equals(book2))
+// prints "true"
+println(dataBook1.equals(dataBook2))
+```
+
+This is also true when we make a hashmap of the three objects. The three objects will create a hashmap of only two objects
+```kotlin
+    val dataBook1 = DataBook("Super Book", "John Doe", 2017, 99.99)
+    val dataBook2 = DataBook("Super Book", "John Doe", 2017, 99.99)
+    val dataBook3 = dataBook1.copy(title = "Super Book 3")
+    
+    val set = hashSetOf(dataBook1, dataBook2, dataBook3)
+    // set is only two large
+    println(set)
+```
+
+Data classes also have a `.copy()` method that can change only chosen values from the original object
+```kotlin
+val dataBook3 = dataBook1.copy(title = "Super Book 3")
+```
+
+Also, `data class` can function similarly to grabbing objects from React `props`
+```kotlin
+val (title, author, year, price) = dataBook1
+```
+
