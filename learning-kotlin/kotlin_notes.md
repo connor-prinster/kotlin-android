@@ -419,3 +419,46 @@ fun main(args: Array<String>) {
     println(animal.species) // will print 'lion'
 }
 ```
+
+## Generics
+Declaring generics is very similar to *C++* and *Java*. For example:
+```kotlin
+class Stack<E>(vararg val items: E) {
+
+    val elements = items.toMutableList()
+
+    fun push(item: E) {
+        elements.add(item)
+    }
+
+    fun pop(): E? {
+        if(!isEmpty()) {
+            return elements.removeAt(elements.size - 1)
+        }
+        return null
+    }
+
+    fun isEmpty(): Boolean {
+        return elements.isEmpty()
+    }
+}
+
+fun <T> stackOf(vararg elements: T): Stack<T> {
+    return Stack(*elements)
+}
+
+fun main() {
+    val stackInt = stackOf(1, 2, 3, 4)
+    val stackString = stackOf("Hello", "World")
+    while(!stackInt.isEmpty()) {
+        println(stackInt.pop())
+    }
+    while(!stackString.isEmpty()) {
+        println(stackString.pop())
+    }
+}
+```
+**Important Note:** `vararg` is if there are a variable number of 
+arguments that may be passed into it. Like in the `Stack<E>` class, 
+there could be any number of items passed into the constructor to be made
+into a `Stack`
