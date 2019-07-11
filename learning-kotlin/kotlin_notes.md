@@ -462,3 +462,24 @@ fun main() {
 arguments that may be passed into it. Like in the `Stack<E>` class, 
 there could be any number of items passed into the constructor to be made
 into a `Stack`
+
+## Input/Output
+To read from the command line, use `readLine()`, like so:
+```kotlin
+fun main() {
+    print("enter something: ")
+    val example = readLine()
+    println(example)
+}
+```
+
+To read from a file:
+```kotlin
+import java.io.File
+
+fun main() {
+    File("<root directory src/<whatever>/<file>").forEachLine {
+        println(it)
+    }
+}
+```
