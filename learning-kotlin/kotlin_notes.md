@@ -545,6 +545,19 @@ fun main() {
 }
 ```
 
+To write to a file:
+```kotlin
+fun main() {
+    try {
+        val fo = FileWriter("test.txt")
+        fo.write("print to string")
+        fo.close()
+    } catch (ex: Exception) {
+        print(ex.message)
+    }
+}
+```
+
 ## Try-Catch
 
 This is for try-catch code
