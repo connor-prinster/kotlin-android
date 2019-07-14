@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="81e850e9-032b-4dbe-b85d-e261502187eb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/kotlin_notes.md" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin_notes.md" afterDir="false" />
-    </list>
+    <list default="true" id="81e850e9-032b-4dbe-b85d-e261502187eb" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,8 +18,8 @@
         <entry file="file://$PROJECT_DIR$/kotlin_notes.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="177">
-                <caret line="553" column="18" lean-forward="true" selection-start-line="553" selection-start-column="18" selection-end-line="553" selection-end-column="18" />
+              <first_editor relative-caret-position="347">
+                <caret line="563" lean-forward="true" selection-start-line="563" selection-end-line="563" />
               </first_editor>
               <second_editor />
             </state>
@@ -256,7 +254,7 @@
     <frame x="745" y="0" width="761" height="966" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.36273116" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.36273116" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -264,8 +262,8 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32894737" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32894737" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.32894737" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32894737" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39952153" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -457,8 +455,8 @@
     <entry file="file://$PROJECT_DIR$/kotlin_notes.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="177">
-            <caret line="553" column="18" lean-forward="true" selection-start-line="553" selection-start-column="18" selection-end-line="553" selection-end-column="18" />
+          <first_editor relative-caret-position="347">
+            <caret line="563" lean-forward="true" selection-start-line="563" selection-end-line="563" />
           </first_editor>
           <second_editor />
         </state>
