@@ -121,6 +121,19 @@ Another nice thing you can use is the keyword inversely. You can use `!in` inste
           println("Element at $index is $value")
     }
     ```
+    * You can also add a `step` parameter to adjust the amount the iterator increases
+    ```kotlin
+    for(i in 0..10 step 2 ) {
+          println(i)
+    }
+    ```
+    * You can also use the `downTo` operator to do the equivalent of the `i--` command
+    ```kotlin
+    for( i in 10 downTo 1) {
+          println(i)
+    }
+    ```
+    
 
 * while loop
     ```kotlin
