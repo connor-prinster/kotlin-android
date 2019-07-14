@@ -228,6 +228,31 @@ fun main() {
 }
 ```
 
+Custom constructors. It returns a `this()` object after the constructor: 
+```kotlin
+class CarOptions() {
+    var type: String? = null
+    var model: Int? = null
+    var price: Int? = null
+    var milesDrive: Int? = 0;
+    var owner: String? = null
+    constructor( type: String, model: Int, price: Double, milesDrive: Int, owner:String):this() {
+        this.type = type
+        this.model = model
+        this.price = price
+        this.milesDrive = milesDrive
+        this.owner = owner
+    }
+    
+    constructor( type: String, model: Int, price: Double, milesDrive: Int):this() {
+        this.type = type
+        this.model = model
+        this.price - price
+        this.milesDrive = milesDrive
+    }
+}
+```
+
 ## Open/Abstract class
 
 Open and Abstract classes are very similar. Open classes **CAN** be overriden, abstract **MUST**.
@@ -516,6 +541,20 @@ import java.io.File
 fun main() {
     File("<root directory src/<whatever>/<file>").forEachLine {
         println(it)
+    }
+}
+```
+
+## Try-Catch
+
+This is for try-catch code
+
+```kotlin
+fun main(args: Array<String>) {
+    try {
+        val num = readLine()!!.toInt()
+    } catch (ex: Exception) {
+        println(ex.message)
     }
 }
 ```
