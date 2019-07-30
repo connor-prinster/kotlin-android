@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">findMyAge</string>
+    <string name="enter_dob">Enter DoB</string>
+    <string name="your_result">Your Result</string>
+    <string name="button_text">Find your age!</string>
+    <string name="empty_input">No Input Given!</string>
+    <string name="future_error">Can\'t be born in the future!</string>
+    <string name="result_text">You are %1$s years old </string>
 </resources>
