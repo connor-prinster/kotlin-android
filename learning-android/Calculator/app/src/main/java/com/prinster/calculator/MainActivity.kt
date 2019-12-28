@@ -17,13 +17,26 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        zero.setOnClickListener { numberClick(zero.id) }
+        one.setOnClickListener { numberClick(one.id) }
+        two.setOnClickListener { numberClick(two.id) }
+        three.setOnClickListener { numberClick(three.id) }
+        four.setOnClickListener { numberClick(four.id) }
+        five.setOnClickListener { numberClick(five.id) }
+        six.setOnClickListener { numberClick(six.id) }
+        seven.setOnClickListener { numberClick(seven.id) }
+        eight.setOnClickListener { numberClick(eight.id) }
+        nine.setOnClickListener { numberClick(nine.id) }
+
+        ac.setOnClickListener { methodClick(ac.id) }
+        posNeg.setOnClickListener { methodClick(posNeg.id) }
     }
 
-    fun numberClick(view:View) {
-        val selectedButton = view as Button
+    fun numberClick(buttonId: Int) {
         var numberValue:String? = null
 
-        when(selectedButton.id) {
+        when(buttonId) {
             zero.id -> {
                 numberValue = "0"
                 addNumber(numberValue)
@@ -65,18 +78,20 @@ class MainActivity : AppCompatActivity() {
                 addNumber(numberValue)
             }
             else -> {
-                Log.d("Button pressed", "Invalid press ${selectedButton.id}")
+                Log.d("Button: ", "Invalid press $buttonId")
             }
         }
     }
 
-    fun methodClick(view:View) {
-        val selectedButton = view as Button
+    fun methodClick(buttonId: Int) {
         var methodValue:String? = null
 
-        when(selectedButton.id) {
+        when(buttonId) {
             ac.id -> {
                 clearNumber()
+            }
+            posNeg.id -> {
+                posNeg()
             }
             else -> {
                 Log.d("issue", "invalid")
@@ -91,23 +106,26 @@ class MainActivity : AppCompatActivity() {
         inputText.setText(newValue)
     }
 
-    fun clearNumber() {
+    private fun clearNumber() {
         Log.d("Button press", "clearing value")
         val inputText = findViewById<EditText>(R.id.inputText)
         inputText.setText("")
     }
 
-    fun posNeg(view:View) {
-        Log.d("Button press", "posNeg")
+    fun posNeg() {
         val inputText = findViewById<EditText>(R.id.inputText)
-        val inputTextString = inputText.toString()
-        var newString = ""
-        if(inputTextString[0] == '-') {
-            newString = inputTextString.replace("-", "")
+        val inputString = inputText.text.toString()
+        var newValue = ""
+        var firstChar = ""
+        if(inputString != "") {
+            firstChar = inputString[0].toString()
+            if(firstChar == "-") {
+                newValue = inputString.substring(1)
+            }
+            else {
+                newValue = "-$inputString"
+            }
+            inputText.setText(newValue)
         }
-        else {
-            newString = "-$inputTextString"
-        }
-        inputText.setText(newString)
     }
 }
