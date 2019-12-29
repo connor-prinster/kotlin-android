@@ -10,10 +10,13 @@
 
     <EditText
             android:layout_width="match_parent"
-            android:layout_height="231dp"
+            android:layout_height="131dp"
             android:inputType="numberSigned|textPersonName|text|numberDecimal|textEmailAddress"
             android:ems="10"
             android:id="@+id/inputText" android:layout_weight="0"/>
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="100dp" android:id="@+id/methodInput" android:layout_weight="0"/>
     <TableLayout
 
             android:layout_width="match_parent"
@@ -63,7 +66,7 @@
             <Button
                     android:text="@string/multiply"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:id="@+id/mulitply" android:layout_weight="1"
+                    android:layout_height="wrap_content" android:id="@+id/multiply" android:layout_weight="1"
                     android:background="@color/methods" android:padding="40dp" />
         </TableRow>
         <TableRow
@@ -124,19 +127,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" android:id="@+id/zero"
                 android:background="@color/numbers" android:padding="40dp" android:layout_weight=".50"
-                />
+        />
         <Button
                 android:text="@string/dot"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" android:id="@+id/dot"
                 android:background="@color/methods" android:padding="40dp" android:layout_weight=".25"
-                />
+        />
         <Button
                 android:text="@string/equals"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" android:id="@+id/equals"
                 android:background="@color/methods" android:padding="40dp" android:layout_weight=".8"
-                />
+        />
     </LinearLayout>
 
 </LinearLayout>

@@ -2,17 +2,22 @@ package com.prinster.calculator
 
 import android.os.Bundle
 import android.util.Log
-import android.view.View
-import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+    val MOD:String = "%"
+    val DIV:String = "/"
+    val MULT:String = "x"
+    val MIN:String = "-"
+    val PLUS:String = "+"
 
-    var firstNumber : String? = null
+    var firstNumber : Double? = null
     var method : String? = null
-    var secondNumber : String? = null
+    var secondNumber : Double? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,6 +36,13 @@ class MainActivity : AppCompatActivity() {
 
         ac.setOnClickListener { methodClick(ac.id) }
         posNeg.setOnClickListener { methodClick(posNeg.id) }
+        mod.setOnClickListener { methodClick(mod.id) }
+        div.setOnClickListener { methodClick(div.id) }
+        multiply.setOnClickListener { methodClick(multiply.id) }
+        minus.setOnClickListener { methodClick(minus.id) }
+        plus.setOnClickListener { methodClick(plus.id) }
+        equals.setOnClickListener { methodClick(equals.id) }
+        dot.setOnClickListener { methodClick(dot.id) }
     }
 
     fun numberClick(buttonId: Int) {
@@ -93,8 +105,26 @@ class MainActivity : AppCompatActivity() {
             posNeg.id -> {
                 posNeg()
             }
-            else -> {
-                Log.d("issue", "invalid")
+            mod.id -> {
+                setMethodType(MOD)
+            }
+            div.id -> {
+                setMethodType(DIV)
+            }
+            multiply.id -> {
+                setMethodType(MULT)
+            }
+            minus.id -> {
+                setMethodType(MIN)
+            }
+            plus.id -> {
+                setMethodType(PLUS)
+            }
+            equals.id -> {
+                performMethod()
+            }
+            dot.id -> {
+                doDot()
             }
         }
     }
@@ -108,8 +138,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun clearNumber() {
         Log.d("Button press", "clearing value")
+        setNull()
         val inputText = findViewById<EditText>(R.id.inputText)
+        val methodInput = findViewById<TextView>(R.id.methodInput)
         inputText.setText("")
+        methodInput.text = ""
     }
 
     fun posNeg() {
@@ -127,5 +160,76 @@ class MainActivity : AppCompatActivity() {
             }
             inputText.setText(newValue)
         }
+    }
+
+    private fun setMethodType(methodString: String) {
+        val inputText = findViewById<EditText>(R.id.inputText)
+        val methodInput = findViewById<TextView>(R.id.methodInput)
+        var inputString = inputText.text.toString()
+
+        if(inputString != "" && firstNumber == null && method == null) {
+            firstNumber = inputString.toDouble()
+            this.method = methodString
+            val newVal = "$inputString $methodString "
+            methodInput.text = newVal
+            inputText.setText("")
+        }
+        else if (inputString == ""){
+            Toast.makeText(this, "No input text", Toast.LENGTH_LONG).show()
+        }
+        else {
+            Toast.makeText(this, "Method already chosen, press the ${getString(R.string.ac)} button if you wish to change method", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    private fun performMethod() {
+        val inputText = findViewById<EditText>(R.id.inputText)
+        val methodInput = findViewById<TextView>(R.id.methodInput)
+        val inputString = inputText.text.toString()
+        if(inputString != "") {
+
+            var finalVal = 0.0
+            secondNumber = inputString.toDouble()
+            val methodText = methodInput.text.toString()
+            when(method) {
+                MOD -> {
+                    finalVal = (firstNumber!!.toInt() % secondNumber!!.toInt()).toDouble()
+                }
+                DIV -> {
+                    finalVal = (firstNumber!! / secondNumber!!)
+                }
+                MULT -> {
+                    finalVal = (firstNumber!! * secondNumber!!)
+                }
+                MIN -> {
+                    finalVal = (firstNumber!! - secondNumber!!)
+                }
+                PLUS -> {
+                    finalVal = (firstNumber!! + secondNumber!!)
+                }
+            }
+            methodInput.text = "$methodText $secondNumber = $finalVal"
+            setNull()
+            inputText.setText("")
+        }
+    }
+
+    private fun setNull() {
+        firstNumber = null
+        secondNumber = null
+        method = null
+    }
+
+    private fun doDot() {
+        val inputText = findViewById<EditText>(R.id.inputText)
+        var inputString = inputText.text.toString()
+        if(inputString.matches("[.]".toRegex())) {
+            Toast.makeText(this, "Multiple decimals are not allowed", Toast.LENGTH_LONG).show()
+        }
+        else {
+            inputString += "."
+            inputText.setText(inputString)
+        }
+
     }
 }
