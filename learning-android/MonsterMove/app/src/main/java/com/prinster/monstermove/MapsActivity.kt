@@ -1,5 +1,4 @@
 package com.prinster.monstermove
-
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.pm.PackageManager
@@ -7,11 +6,11 @@ import android.location.Location
 import android.location.LocationListener
 import android.location.LocationManager
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.FragmentActivity
 import android.os.Bundle
+import androidx.core.app.ActivityCompat
 import android.util.Log
 import android.widget.Toast
-import androidx.core.app.ActivityCompat
 
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
@@ -20,12 +19,13 @@ import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
-import java.lang.Exception
 
-class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
+class MapsActivity : FragmentActivity(), OnMapReadyCallback  {
 
-    private lateinit var mMap: GoogleMap
-    var location:Location? = null
+    //WORK WITH USER LOCATION
+
+
+    private var mMap: GoogleMap? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,8 +35,61 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
             .findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
 
-        checkPermission()
+
+        checkPermmison()
+        LoadPockemon()
     }
+
+    var ACCESSLOCATION=123
+    fun checkPermmison(){
+
+        if(Build.VERSION.SDK_INT>=23){
+
+            if(ActivityCompat.
+                    checkSelfPermission(this,
+                        android.Manifest.permission.ACCESS_FINE_LOCATION)!=PackageManager.PERMISSION_GRANTED){
+
+                requestPermissions(arrayOf(android.Manifest.permission.ACCESS_FINE_LOCATION),ACCESSLOCATION)
+                return
+            }
+        }
+
+        GetUserLocation()
+    }
+
+    @SuppressLint("MissingPermission")
+    fun GetUserLocation(){
+        Toast.makeText(this,"User location access on",Toast.LENGTH_LONG).show()
+        //TODO: Will implement later
+
+        var myLocation= MylocationListener()
+
+        var locationManager=getSystemService(Context.LOCATION_SERVICE) as LocationManager
+
+        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,3,3f,myLocation)
+
+        var mythread=myThread()
+        mythread.start()
+    }
+
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
+
+        when(requestCode){
+
+            ACCESSLOCATION->{
+
+                if (grantResults[0]==PackageManager.PERMISSION_GRANTED){
+                    GetUserLocation()
+                }else{
+                    Toast.makeText(this,"We cannot access to your location",Toast.LENGTH_LONG).show()
+                }
+            }
+        }
+
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+    }
+
+
 
     /**
      * Manipulates the map once available.
@@ -49,108 +102,137 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
      */
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap
+
+
     }
 
-    var ACCESSLOCATION = 123
-    fun checkPermission() {
-        if(Build.VERSION.SDK_INT >= 23) {
-            if(ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION)!=PackageManager.PERMISSION_GRANTED) {
-                requestPermissions(arrayOf(android.Manifest.permission.ACCESS_FINE_LOCATION), ACCESSLOCATION)
-                return
-            }
+    var location:Location?=null
+
+    //Get user location
+
+    inner class MylocationListener:LocationListener{
+
+
+        constructor(){
+            location= Location("Start")
+            location!!.longitude=0.0
+            location!!.longitude=0.0
         }
-
-        getUserLocation()
-    }
-
-    @SuppressLint("MissingPermission")
-    fun getUserLocation() {
-        Toast.makeText(this, "User location access on this message", Toast.LENGTH_LONG).show()
-
-        var myLocation = MyLocationListener()
-        var locationManager = getSystemService(Context.LOCATION_SERVICE) as LocationManager
-
-        locationManager.requestLocationUpdates(
-            LocationManager.GPS_PROVIDER,
-            3,
-            3f,
-            myLocation
-        )
-        var myThread = myThread()
-        myThread.start()
-    }
-
-    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
-
-        when(requestCode) {
-            ACCESSLOCATION -> {
-                if(grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    getUserLocation()
-                }
-                else {
-                    Toast.makeText(this, "We cannot access your location", Toast.LENGTH_LONG).show()
-                }
-            }
-        }
-
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-    }
-
-    // get user location
-    inner class MyLocationListener() :LocationListener{
-
-
-        init {
-            location = Location("Start")
-            location!!.longitude = 0.0
-            location!!.latitude = 0.0
+        override fun onLocationChanged(p0: Location?) {
+            location=p0
         }
 
         override fun onStatusChanged(p0: String?, p1: Int, p2: Bundle?) {
-            TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+            //TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
         }
 
         override fun onProviderEnabled(p0: String?) {
-            TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+            // TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
         }
 
         override fun onProviderDisabled(p0: String?) {
-            TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-        }
-
-        override fun onLocationChanged(p0: Location?) {
-            location = p0
+            //TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
         }
 
     }
 
-    inner class myThread: Thread {
-        constructor():super() { println("thread built")}
 
-        override fun run() {
+    var oldLocation:Location?=null
+    inner class myThread:Thread{
 
-            while(true) {
+        constructor():super(){
+            oldLocation= Location("Start")
+            oldLocation!!.longitude=0.0
+            oldLocation!!.longitude=0.0
+        }
+
+        override fun run(){
+
+            while (true){
+
                 try {
+
+                    if(oldLocation!!.distanceTo(location)==0f){
+                        continue
+                    }
+
+                    oldLocation=location
+
+
                     runOnUiThread {
-                        mMap.clear()
-                        val sydney = LatLng(location!!.latitude, location!!.latitude)
-                        mMap.addMarker(
-                            MarkerOptions()
-                                .position(sydney)
-                                .title("Marker in Sydney")
-                                .snippet("Here is my location")
-                                .icon(BitmapDescriptorFactory.fromResource(R.drawable.litwick))
-                        )
-                        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(sydney, 14f))
+
+
+                        mMap!!.clear()
+
+                        // show me
+                        val sydney = LatLng(location!!.latitude, location!!.longitude)
+                        mMap!!.addMarker(MarkerOptions()
+                            .position(sydney)
+                            .title("Me")
+                            .snippet(" here is my location")
+                            .icon(BitmapDescriptorFactory.fromResource(R.drawable.litwick)))
+                        mMap!!.moveCamera(CameraUpdateFactory.newLatLngZoom(sydney, 14f))
+
+                        // show pockemons
+
+                        for(i in 0..listPockemons.size-1){
+
+                            var newPockemon=listPockemons[i]
+
+                            if(newPockemon.IsCatch==false){
+
+                                val pockemonLoc = LatLng(newPockemon.location!!.latitude, newPockemon.location!!.longitude)
+                                mMap!!.addMarker(MarkerOptions()
+                                    .position(pockemonLoc)
+                                    .title(newPockemon.name!!)
+                                    .snippet(newPockemon.des!! +", power:"+ newPockemon!!.power)
+                                    .icon(BitmapDescriptorFactory.fromResource(newPockemon.image!!)))
+
+
+                                if (location!!.distanceTo(newPockemon.location)<2){
+                                    newPockemon.IsCatch=true
+                                    listPockemons[i]=newPockemon
+                                    playerPower+=newPockemon.power!!
+                                    Toast.makeText(applicationContext,
+                                        "You catch new pockemon your new pwoer is " + playerPower,
+                                        Toast.LENGTH_LONG).show()
+
+                                }
+
+                            }
+                        }
+
+
+
+
+
                     }
 
                     Thread.sleep(1000)
-                }
-                catch(ex: Exception) {
-                    Log.d("Exception", ex.toString())
-                }
+
+                }catch (ex:Exception){}
+
+
             }
 
         }
+
     }
+
+
+    var playerPower=0.0
+    var listPockemons=ArrayList<Pockemon>()
+
+    fun  LoadPockemon(){
+
+
+        listPockemons.add(Pockemon(R.drawable.oshawott,
+            "Oshawott", "Oshawott living in japan", 55.0, 37.7789994893035, -122.401846647263))
+        listPockemons.add(Pockemon(R.drawable.bulbasaur,
+            "Bulbasaur", "Bulbasaur living in usa", 90.5, 37.7949568502667, -122.410494089127))
+        listPockemons.add(Pockemon(R.drawable.grookey,
+            "Grookey", "Grookey living in iraq", 33.5, 37.7816621152613, -122.41225361824))
+
+    }
+
 }
