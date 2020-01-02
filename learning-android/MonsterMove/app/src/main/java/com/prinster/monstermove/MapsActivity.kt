@@ -1,18 +1,31 @@
 package com.prinster.monstermove
 
+import android.annotation.SuppressLint
+import android.content.Context
+import android.content.pm.PackageManager
+import android.location.Location
+import android.location.LocationListener
+import android.location.LocationManager
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.widget.Toast
+import androidx.core.app.ActivityCompat
 
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
+import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
+import java.lang.Exception
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
     private lateinit var mMap: GoogleMap
+    var location:Location? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,6 +34,8 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         val mapFragment = supportFragmentManager
             .findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
+
+        checkPermission()
     }
 
     /**
@@ -34,10 +49,108 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
      */
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap
+    }
 
-        // Add a marker in Sydney and move the camera
-        val sydney = LatLng(-34.0, 151.0)
-        mMap.addMarker(MarkerOptions().position(sydney).title("Marker in Sydney"))
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney))
+    var ACCESSLOCATION = 123
+    fun checkPermission() {
+        if(Build.VERSION.SDK_INT >= 23) {
+            if(ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION)!=PackageManager.PERMISSION_GRANTED) {
+                requestPermissions(arrayOf(android.Manifest.permission.ACCESS_FINE_LOCATION), ACCESSLOCATION)
+                return
+            }
+        }
+
+        getUserLocation()
+    }
+
+    @SuppressLint("MissingPermission")
+    fun getUserLocation() {
+        Toast.makeText(this, "User location access on this message", Toast.LENGTH_LONG).show()
+
+        var myLocation = MyLocationListener()
+        var locationManager = getSystemService(Context.LOCATION_SERVICE) as LocationManager
+
+        locationManager.requestLocationUpdates(
+            LocationManager.GPS_PROVIDER,
+            3,
+            3f,
+            myLocation
+        )
+        var myThread = myThread()
+        myThread.start()
+    }
+
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
+
+        when(requestCode) {
+            ACCESSLOCATION -> {
+                if(grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    getUserLocation()
+                }
+                else {
+                    Toast.makeText(this, "We cannot access your location", Toast.LENGTH_LONG).show()
+                }
+            }
+        }
+
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+    }
+
+    // get user location
+    inner class MyLocationListener() :LocationListener{
+
+
+        init {
+            location = Location("Start")
+            location!!.longitude = 0.0
+            location!!.latitude = 0.0
+        }
+
+        override fun onStatusChanged(p0: String?, p1: Int, p2: Bundle?) {
+            TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        }
+
+        override fun onProviderEnabled(p0: String?) {
+            TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        }
+
+        override fun onProviderDisabled(p0: String?) {
+            TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        }
+
+        override fun onLocationChanged(p0: Location?) {
+            location = p0
+        }
+
+    }
+
+    inner class myThread: Thread {
+        constructor():super() { println("thread built")}
+
+        override fun run() {
+
+            while(true) {
+                try {
+                    runOnUiThread {
+                        mMap.clear()
+                        val sydney = LatLng(location!!.latitude, location!!.latitude)
+                        mMap.addMarker(
+                            MarkerOptions()
+                                .position(sydney)
+                                .title("Marker in Sydney")
+                                .snippet("Here is my location")
+                                .icon(BitmapDescriptorFactory.fromResource(R.drawable.litwick))
+                        )
+                        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(sydney, 14f))
+                    }
+
+                    Thread.sleep(1000)
+                }
+                catch(ex: Exception) {
+                    Log.d("Exception", ex.toString())
+                }
+            }
+
+        }
     }
 }
