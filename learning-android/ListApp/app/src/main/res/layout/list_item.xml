@@ -6,6 +6,7 @@
                 android:background="@drawable/list_item_background">
     <ImageView
             android:layout_width="match_parent"
+            android:contentDescription="@string/picture_content_desc"
             android:layout_height="wrap_content" app:srcCompat="@drawable/baboon" android:id="@+id/animal_image"/>
     <LinearLayout
             android:orientation="vertical"

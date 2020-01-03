@@ -19,6 +19,16 @@ class MainActivity : AppCompatActivity() {
         rv_list.adapter = AnimalListAdapter(animals, this)
     }
 
+    fun delete(index: Int) {
+        animals.removeAt(index)
+        rv_list.adapter!!.notifyDataSetChanged()
+    }
+
+    fun add(index: Int) {
+        animals.add(animals[index])
+        rv_list.adapter!!.notifyDataSetChanged()
+    }
+
     private fun createAnimalList() {
         animals = arrayListOf(
             Animal(R.drawable.baboon, "Baboon", "A baboon", true),

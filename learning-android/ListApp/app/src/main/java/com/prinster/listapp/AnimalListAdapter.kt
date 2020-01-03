@@ -1,6 +1,7 @@
 package com.prinster.listapp
 
 import android.content.Context
+import android.content.Intent
 import android.graphics.drawable.Drawable
 import android.view.LayoutInflater
 import android.view.View
@@ -15,25 +16,36 @@ class AnimalListAdapter(val items : ArrayList<Animal>, private val context: Cont
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-//        parent.background = ContextCompat.getDrawable(context, R.drawable.list_item_background)
-        return ViewHolder(LayoutInflater.from(context).inflate(R.layout.list_item, parent, false))
+        val view: View = LayoutInflater.from(context).inflate(R.layout.list_item, parent, false)
+        return ViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.animalType.text = items[position].getAnimalType()
-        holder.animalDesc.text = items[position].getAnimalDesc()
+        val currentAnimal: Animal = items[position]
+
+        holder.animalType.text = currentAnimal.getAnimalType()
+        holder.animalDesc.text = currentAnimal.getAnimalDesc()
         val isDangerous = items[position].getDangerous()
         if(isDangerous) {
             holder.setBackground(ContextCompat.getDrawable(context, R.drawable.list_item_background_dangerous))
         }
         holder.animalImage.setImageDrawable(
-            ContextCompat.getDrawable(context, items[position].getImage())
+            ContextCompat.getDrawable(context, currentAnimal.getImage())
         )
+
+        holder.itemView.setOnClickListener {
+//            Toast.makeText(context, "You clicked on ${currentAnimal.getAnimalType()}", Toast.LENGTH_SHORT).show()
+            val intent = Intent(context, AnimalDetails::class.java)
+            intent.putExtra("type", currentAnimal.getAnimalType())
+            intent.putExtra("desc", currentAnimal.getAnimalDesc())
+            intent.putExtra("img", currentAnimal.getImage())
+            context.startActivity(intent)
+        }
     }
 }
 
 class ViewHolder (private val view: View) : RecyclerView.ViewHolder(view) {
-    var isDangerous = view.background!!
+
     val animalType = view.animal_type!!
     val animalDesc = view.animal_desc!!
     val animalImage = view.animal_image!!
