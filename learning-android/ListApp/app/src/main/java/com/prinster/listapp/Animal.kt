@@ -1,6 +1,7 @@
 package com.prinster.listapp
 
-class Animal(private var image: Int, private var animalType: String, private var animalDesc: String) {
+class Animal(private var image: Int, private var animalType: String, private var animalDesc: String, private var dangerous: Boolean) {
+
     fun getImage(): Int {
         return image
     }
@@ -11,5 +12,9 @@ class Animal(private var image: Int, private var animalType: String, private var
 
     fun getAnimalDesc(): String {
         return animalDesc
+    }
+
+    fun getDangerous(): Boolean {
+        return dangerous
     }
 }

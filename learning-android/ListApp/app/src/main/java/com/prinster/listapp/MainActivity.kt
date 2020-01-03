@@ -21,18 +21,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun createAnimalList() {
         animals = arrayListOf(
-            Animal(R.drawable.baboon, "Baboon", "A baboon"),
-            Animal(R.drawable.bulldog, "Bulldog", "A bulldog"),
-            Animal(R.drawable.panda, "Panda", "A panda"),
-            Animal(R.drawable.swallow_bird, "Swallow", "A swallow"),
-            Animal(R.drawable.white_tiger, "White Tiger", "A white tiger"),
-            Animal(R.drawable.zebra, "Zebra", "A zebra")
-
+            Animal(R.drawable.baboon, "Baboon", "A baboon", true),
+            Animal(R.drawable.bulldog, "Bulldog", "A bulldog", false),
+            Animal(R.drawable.panda, "Panda", "A panda", false),
+            Animal(R.drawable.swallow_bird, "Swallow", "A swallow", false),
+            Animal(R.drawable.white_tiger, "White Tiger", "A white tiger", true),
+            Animal(R.drawable.zebra, "Zebra", "A zebra", false)
         )
-//            "Bulldog",
-//            "Panda",
-//            "Swallow",
-//            "White Tiger",
-//            "Zebra")
     }
 }
