@@ -11,15 +11,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Hello World!"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.482"
-            app:layout_constraintVertical_bias="0.241" android:id="@+id/result_text"/>
+            android:id="@+id/sunrise_text" android:layout_marginTop="116dp" tools:text="@string/sunrise_text"/>
     <Button
             android:text="Button"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" tools:layout_editor_absoluteY="268dp"
+            android:layout_height="wrap_content" tools:layout_editor_absoluteY="279dp"
             tools:layout_editor_absoluteX="150dp" android:id="@+id/get_method"/>
+    <TextView
+            android:text="@string/sunset_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" tools:layout_editor_absoluteY="173dp"
+            tools:layout_editor_absoluteX="176dp" android:id="@+id/sunset_text"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

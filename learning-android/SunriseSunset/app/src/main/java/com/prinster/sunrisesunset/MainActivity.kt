@@ -1,5 +1,6 @@
 package com.prinster.sunrisesunset
 
+import android.annotation.SuppressLint
 import android.os.AsyncTask
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -63,6 +64,7 @@ class MainActivity : AppCompatActivity() {
             return findSunset(urls[0]!!)
         }
 
+        @SuppressLint("SetTextI18n")
         override fun onPostExecute(result: String?) {
             if(result != null) {
                 val json = JSONObject(result)
@@ -71,32 +73,40 @@ class MainActivity : AppCompatActivity() {
                 val sys = json.getJSONObject("sys")
                 val sunrise = sys.getLong("sunrise")
                 val sunset = sys.getLong("sunset")
-                val riseDate = Date(sunrise * 1000)
 
-                Log.d("sunrise", riseDate.toString())
-                result_text.text = riseDate.toString()//json.getJSONObject("coord").toString()
+                sunrise_text.text = returnSunrise(sunrise)
+                sunset_text.text = returnSunset(sunset)
             }
             else {
-                result_text.text = "error"
+                sunset_text.text = "error in json"
             }
 
         }
     }
 
-    fun convertInputStreamToString(inputStream: InputStream):String {
+    fun returnSunset(sunrise: Long): String {
+        val riseDate = Date(sunrise * 1000)
+        val riseCal: Calendar = Calendar.Builder().setInstant(riseDate).build()
+        return " ${riseCal.get(Calendar.MONTH) + 1}/${riseCal.get(Calendar.DAY_OF_MONTH)}/${riseCal.get(Calendar.YEAR)}"
+    }
+
+    fun returnSunrise(sunset: Long): String {
+        val setDate = Date(sunset * 1000)
+        val setCal: Calendar = Calendar.Builder().setInstant(setDate).build()
+        return " ${setCal.get(Calendar.MONTH) + 1}/${setCal.get(Calendar.DAY_OF_MONTH)}/${setCal.get(Calendar.YEAR)}"
+    }
+
+    private fun convertInputStreamToString(inputStream: InputStream):String {
         val bufferReader = BufferedReader(InputStreamReader(inputStream))
-        var line: String
         var allString = ""
 
         try {
             bufferReader.use {
-                it.lines().forEach{
-                        line -> allString += line
-                }
+                it.lines().forEach{ line -> allString += line }
             }
-        } catch (ex: Exception) {
-//            Log.d("exception", ex.toString())
-            return ""
+        }
+        catch (ex: Exception) {
+            Log.d("exception in convertInputStreamToString", ex.toString())
         }
 
         return allString
