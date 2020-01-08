@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Sunrise Sunset</string>
+    <string name="sunset_text">The Sunset is at:</string>
+    <string name="sunrise_text">The Sunrise is at:</string>
+    <string name="zip_code">Enter zipcode</string>
+    <string name="get_sun_data">Get sun data</string>
+    <string name="json_error">Error in JSON!</string>
+</resources>
