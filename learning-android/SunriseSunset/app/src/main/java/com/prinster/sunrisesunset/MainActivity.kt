@@ -12,6 +12,7 @@ import java.io.BufferedReader
 import java.io.InputStream
 import java.io.InputStreamReader
 import java.lang.Exception
+import java.net.ConnectException
 import java.net.HttpURLConnection
 import java.net.URL
 import java.util.*
@@ -40,28 +41,35 @@ class MainActivity : AppCompatActivity() {
         Toast.makeText(this, "Not a valid zip code", Toast.LENGTH_SHORT).show()
     }
 
-    private fun findSunData(myUrl: String):String {
-        val inputStream: InputStream
-        var result = ""
-        val url= URL(myUrl)
-        val conn: HttpURLConnection = url.openConnection() as HttpURLConnection
-        conn.connect()
-        conn.connectTimeout = 7000
-
-        inputStream = conn.inputStream
-        if(conn.responseCode < 400) {
-            result = convertInputStreamToString(inputStream)
-        }
-        else {
-            Log.d("Error", "DID NOT WORK!")
-        }
-
-        return result
-    }
-
     inner class HTTPAsyncTask: AsyncTask<String, String, String>() {
-        override fun doInBackground(vararg urls: String?): String {
-            return findSunData(urls[0]!!)
+        override fun doInBackground(vararg urls: String?): String? {
+            val myUrl = urls[0]!!
+            val inputStream: InputStream
+            var result:String? = ""
+            val url= URL(myUrl)
+            val conn: HttpURLConnection = url.openConnection() as HttpURLConnection
+            try {
+                conn.connect()
+
+                val responseCode = conn.responseCode
+                if(responseCode == HttpURLConnection.HTTP_OK) {
+                    inputStream = conn.inputStream
+                    result = convertInputStreamToString(inputStream)
+
+                }
+                else {
+                    result = null
+                }
+            }
+            catch (e: Exception) {
+                showZipErrorToast()
+                Log.d("something else", e.toString())
+            }
+            finally {
+                conn.disconnect()
+            }
+
+            return result
         }
 
         override fun onPostExecute(result: String?) {
@@ -77,7 +85,9 @@ class MainActivity : AppCompatActivity() {
                 sunset_text.text = returnSunset(sunset)
             }
             else {
-                sunset_text.text = "error in json"
+                sunrise_text.text = ("${resources.getString(R.string.sunrise_text)} ${getString(R.string.json_error)}")
+                sunset_text.text = ("${resources.getString(R.string.sunset_text)} ${getString(R.string.json_error)}")
+                showZipErrorToast()
             }
 
         }
@@ -115,6 +125,8 @@ class MainActivity : AppCompatActivity() {
         }
         catch (ex: Exception) {
             Log.d("exception in convertInputStreamToString", ex.toString())
+        }
+        finally {
         }
 
         return allString
