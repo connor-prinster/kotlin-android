@@ -8,4 +8,5 @@
     <string name="add_content">Add Content</string>
     <string name="add_note">Add Note</string>
     <string name="discard_note">Discard Note</string>
+    <string name="search_notes">Search Notes</string>
 </resources>
