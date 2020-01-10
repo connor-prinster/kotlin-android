@@ -4,4 +4,8 @@
     <string name="delete_text">Delete</string>
     <string name="title_text">Title</string>
     <string name="content_text">Content</string>
+    <string name="add_title">Add Title</string>
+    <string name="add_content">Add Content</string>
+    <string name="add_note">Add Note</string>
+    <string name="discard_note">Discard Note</string>
 </resources>
