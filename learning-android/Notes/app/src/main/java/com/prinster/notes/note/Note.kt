@@ -1,22 +1,6 @@
 package com.prinster.notes.note
 
-class Note {
-
-    private var title: String = ""
-    private var content: String = ""
-    private var id: String = ""
-
-    constructor(title: String, content: String) {
-        this.title = title
-        this.content = content
-        this.id = ""
-    }
-
-    constructor(title: String, content: String, id: String) {
-        this.title = title
-        this.content = content
-        this.id = id
-    }
+class Note(private var title: String, private var content: String, private var id: Int) {
 
     fun returnTitle(): String {
         return title
@@ -26,7 +10,7 @@ class Note {
         return content
     }
 
-    fun returnID(): String {
+    fun returnID(): Int {
         return id
     }
 }

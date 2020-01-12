@@ -33,7 +33,7 @@
                 style="?android:attr/buttonBarButtonStyle"
                 android:text="@string/discard_note"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content" android:id="@+id/button3" android:layout_weight="1"
+                android:layout_height="wrap_content" android:id="@+id/discard_note" android:layout_weight="1"
                 android:textColor="@android:color/black" android:textColorHighlight="@android:color/black"
                 android:background="@android:color/holo_red_dark"/>
         <Button
