@@ -7,10 +7,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.*
 import android.widget.SearchView
-import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-//import com.prinster.notes.adapter.NoteListAdapter
 import com.prinster.notes.addNote.AddNote
 import com.prinster.notes.database.DbManager
 import com.prinster.notes.note.Note
@@ -64,12 +62,23 @@ class MainActivity : AppCompatActivity() {
                 val addNoteIntent = Intent(this, AddNote::class.java)
                 startActivity(addNoteIntent)
             }
-            R.id.search_note_menu -> {
-                makeClickedToast("search note menu")
-            }
         }
 
         return super.onOptionsItemSelected(item)
+    }
+
+    override fun onResume() {
+        super.onResume()
+        loadQuery("%")
+    }
+
+    private fun updateList(title: String, content: String, id: Int) {
+        var intent = Intent(applicationContext, AddNote::class.java)
+        intent.putExtra("title", title)
+        intent.putExtra("content", content)
+        intent.putExtra("id", id)
+        startActivity(intent)
+
     }
 
 
@@ -96,10 +105,6 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private fun makeClickedToast(message: String) {
-        Toast.makeText(this, "You clicked on $message", Toast.LENGTH_SHORT).show()
-    }
-
     inner class NoteListAdapter(private val notes: ArrayList<Note>, private val context: Context) : RecyclerView.Adapter<ViewHolder>() {
         override fun getItemCount(): Int {
             return notes.size
@@ -116,13 +121,16 @@ class MainActivity : AppCompatActivity() {
             holder.title.text = currentNote.returnTitle()
             holder.content.text = currentNote.returnContent()
 
-            holder.editButton.setOnClickListener { Toast.makeText(context, "Clicked edit button on ${holder.title.text}", Toast.LENGTH_SHORT).show() }
-            holder.deleteButton.setOnClickListener(View.OnClickListener {
+            holder.editButton.setOnClickListener {
+
+                updateList(currentNote.returnTitle(), currentNote.returnContent(), currentNote.returnID())
+            }
+            holder.deleteButton.setOnClickListener{
                 val dbManager = DbManager(context)
                 val selectionArgs: Array<String> = arrayOf(currentNote.returnID().toString())
                 dbManager.delete("ID=?", selectionArgs)
                 loadQuery("%")
-            })
+            }
         }
     }
 

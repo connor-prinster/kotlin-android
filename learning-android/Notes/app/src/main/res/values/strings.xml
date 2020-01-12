@@ -9,4 +9,6 @@
     <string name="add_note">Add Note</string>
     <string name="discard_note">Discard Note</string>
     <string name="search_notes">Search Notes</string>
+    <string name="update_note">Update Note</string>
+    <string name="discard_changes">Discard Changes</string>
 </resources>
