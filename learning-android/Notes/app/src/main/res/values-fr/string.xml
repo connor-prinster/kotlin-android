@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Remarques</string>
+    <string name="edit_text">Éditer</string>
+    <string name="delete_text">Supprimer</string>
+    <string name="title_text">Titre</string>
+    <string name="content_text">Contenu</string>
+    <string name="add_title">Ajouter un Titre</string>
+    <string name="add_content">Ajouter du Contenu</string>
+    <string name="add_note">Ajouter Une Note</string>
+    <string name="discard_note">Supprimer la Note</string>
+    <string name="search_notes">Notes de Recherche</string>
+    <string name="update_note">Note de Mise à Jour</string>
+    <string name="discard_changes">Annuler les mMdifications</string>
+</resources>

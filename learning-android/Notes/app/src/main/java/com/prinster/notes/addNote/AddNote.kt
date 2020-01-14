@@ -39,7 +39,11 @@ class AddNote : AppCompatActivity() {
     }
 
     private fun addNote() {
+<<<<<<< HEAD
 //        val dbName = "MyNotes"
+=======
+        val dbName = "MyNotes"
+>>>>>>> 655dcdcdf36281f4f4a6801feaf50a80ce241da1
         val dbManager = DbManager(this)
         val values = ContentValues()
         values.put("Title", note_title.text.toString())
@@ -54,7 +58,11 @@ class AddNote : AppCompatActivity() {
             }
         }
         else {
+<<<<<<< HEAD
             val selectionArgs = arrayOf(id.toString())
+=======
+            val selectionArgs = arrayOf(id!!.toString())
+>>>>>>> 655dcdcdf36281f4f4a6801feaf50a80ce241da1
             val updated = dbManager.update(values, "id = ?", selectionArgs)
             if(updated > 0) {
                 toastSuccess()

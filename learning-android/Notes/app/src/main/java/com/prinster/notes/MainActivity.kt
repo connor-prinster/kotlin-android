@@ -9,7 +9,10 @@ import android.view.*
 import android.widget.SearchView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+<<<<<<< HEAD
 import com.google.android.gms.ads.MobileAds
+=======
+>>>>>>> 655dcdcdf36281f4f4a6801feaf50a80ce241da1
 import com.prinster.notes.addNote.AddNote
 import com.prinster.notes.database.DbManager
 import com.prinster.notes.note.Note
@@ -23,7 +26,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+<<<<<<< HEAD
         MobileAds.initialize(this)
+=======
+>>>>>>> 655dcdcdf36281f4f4a6801feaf50a80ce241da1
 
         loadQuery("%")
     }

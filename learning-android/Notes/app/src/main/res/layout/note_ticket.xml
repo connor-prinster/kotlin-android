@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/silver">
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_weight="1"
+            android:background="@drawable/note_background" android:layout_margin="10dp">
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/text_bar">
+            <TextView
+                    android:text="@string/title_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/title_text" android:textSize="22sp"/>
+            <TextView
+                    android:text="@string/content_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/content_text" android:textSize="14sp"/>
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/edit_delete_bar"
+                style="@style/Widget.AppCompat.ButtonBar">
+            <Button
+                    android:text="@string/edit_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/edit_button" android:layout_weight="1"
+                    style="@style/Widget.AppCompat.ButtonBar" android:textSize="20sp"
+                    android:background="@color/edit_button"/>
+            <Button
+                    android:text="@string/delete_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/delete_button" android:layout_weight="1"
+                    style="@style/Widget.AppCompat.ButtonBar" android:textSize="20sp"
+                    android:background="@color/delete_button"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

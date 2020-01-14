@@ -1,5 +1,9 @@
 <resources>
+<<<<<<< HEAD
     <string name="app_name">Notepad-=</string>
+=======
+    <string name="app_name">Notes</string>
+>>>>>>> 655dcdcdf36281f4f4a6801feaf50a80ce241da1
     <string name="edit_text">Edit</string>
     <string name="delete_text">Delete</string>
     <string name="title_text">Title</string>

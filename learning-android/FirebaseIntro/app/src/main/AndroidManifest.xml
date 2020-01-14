@@ -9,6 +9,7 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+<<<<<<< HEAD
         <activity android:name=".SignIn">
         </activity>
         <activity
@@ -17,6 +18,8 @@
         </activity>
         <activity android:name=".LoggedIn">
         </activity>
+=======
+>>>>>>> 655dcdcdf36281f4f4a6801feaf50a80ce241da1
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
