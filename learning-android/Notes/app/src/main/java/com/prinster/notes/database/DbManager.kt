@@ -27,7 +27,7 @@ class DbManager(context: Context) {
 
     fun query(projection:Array<String>, selection:String, selectionArgs:Array<String>, sortOrder: String): Cursor {
         val queryBuilder = SQLiteQueryBuilder()
-        queryBuilder.tables = dbName
+        queryBuilder.tables = dbTable
         return queryBuilder.query(sqlDB, projection, selection, selectionArgs, null, null, sortOrder)
     }
 
